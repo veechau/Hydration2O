@@ -2,12 +2,19 @@
   "manifest_version": 2,
   "name": "Hydration2O",
   "version": "1.0",
-
-  "default_locale": "en",
   "description": "Stay healthy and hydrated with Hydration2O",
+
+  "icons": {
+  "128": "icon-128.png"
+  },
+
+  "permissions": [
+   "alarms"
+  ],
 
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   }
+
 }
