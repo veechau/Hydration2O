@@ -19,7 +19,6 @@ function alertUser(){
   })
 }
 
-function clearAlarm(event){
-  event.preventDefault();
+function clearAlarm(){
   chrome.alarms.clearAll();
 }
