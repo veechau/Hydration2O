@@ -5,31 +5,76 @@
     <title>Hydration2O</title>
     <style>
       body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 0.8em;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffff88;
+        min-width: 260px;
+        min-height: 260px;
+        margin: auto;
+        padding: 20px;
+        border-bottom-right-radius: 60px 5px;
+        font-family: 'Permanent Marker', sans-serif;
+        font-size: 2em;
         text-align: center;
-        background-color: #40a4df;
-        min-width: 300px;
       }
       #reminder {
-        color: #FFFFFF;
+        color: #000000;
       }
       #timer-form {
-
+        display: flex;
+        flex-direction: column;
+      }
+      input {
+        font-size: 1em;
+        text-align: center;
+        border: none;
+        background-color: #ffff88;
+        border-bottom: 2px solid #000000;
+      }
+      input:focus {
+        outline: 0;
+      }
+      button {
+        color: #FFFFFF;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 10px auto 10px auto;
+        border: none;
+        border-radius: 8px;
+        width: 80%;
+      }
+      button:focus {
+        outline:0;
+      }
+      #submit-btn:hover, #disable-btn:hover {
+        background-color: rgba(0, 0, 0, .2);
+      }
+      #submit-btn {
+        background-color: #00b200;
+      }
+      #disable-btn {
+        background-color: #ff0000;
       }
     </style>
-
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <script type="text/javascript" src="popup.js"></script>
     <script type="text/javascript" src="background.js"></script>
   </head>
   <body>
+
     <div id="reminder">
       Remind me to drink water every
     </div>
+
     <form id="timer-form">
-      <input type="number" name="timeInterval" min="1" max="1000" value="20"/> <label>minutes</label>
-      <button type="submit">Activate Alarm</button>
+      <div>
+        <input type="number" name="timeInterval" min="1" max="1000" value="20"/>
+        <label>minutes</label>
+      </div>
+      <button id="submit-btn" type="submit">Activate Alarm</button>
     </form>
+
     <button id="disable-btn">Disable</button>
+
   </body>
 </html>

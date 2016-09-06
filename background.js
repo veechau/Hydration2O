@@ -1,6 +1,7 @@
 
 function createAlarm(timeInterval) {
   chrome.alarms.clearAll();
+
   chrome.alarms.create("Reminder", { periodInMinutes: timeInterval });
   chrome.alarms.onAlarm.addListener(alertUser);
 }
@@ -14,7 +15,7 @@ let opt = {
 
 function alertUser(){
   chrome.notifications.create("HydrationReminder", opt, function(){
-    console.log("ALERT");
+    console.log("Insert alarm sound later on");
   })
 }
 
