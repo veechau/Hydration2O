@@ -12,7 +12,7 @@
     "scripts": ["background.js"]
   },
 
-  "permissions": ["alarms", "background"],
+  "permissions": ["alarms", "notifications", "background"],
 
   "browser_action": {
     "default_title": "Hydration2O",
